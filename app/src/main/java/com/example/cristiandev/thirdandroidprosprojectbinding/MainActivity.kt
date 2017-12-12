@@ -1,11 +1,12 @@
 package com.example.cristiandev.thirdandroidprosprojectbinding
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.support.v7.app.AppCompatActivity
 import com.example.cristiandev.thirdandroidprosprojectbinding.adapters.MovieAdapter
 import com.example.cristiandev.thirdandroidprosprojectbinding.model.Movie
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +30,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goToDetail(position:Int){
-        Toast.makeText(this,"Pelicula : ${data[position].nombre}",Toast.LENGTH_LONG).show()
+        startActivity<DetailActivity>("movie" to data[position])
     }
     fun saveFavorite(position: Int){
-        Toast.makeText(this,"Favorito : ${data[position].nombre}",Toast.LENGTH_LONG).show()
+        toast("Favorito : ${data[position].nombre}")
     }
 
 }

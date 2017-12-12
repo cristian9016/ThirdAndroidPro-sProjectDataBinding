@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThirdAndroidPro\'sProjectBinding</string>
+    <string name="app_name">Peliculas</string>
     <string name="duration"> $1%d min</string>
     <string name="no_title">Sin Nombre</string>
 </resources>
